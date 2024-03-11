@@ -75,7 +75,7 @@ services:
     build:
       context: images/spa-auth-web
     ports:
-      - "3000:3000"
+      - "3003:3000"
   jwt_revoke:
     build:
       context: images/jwt-revoker
