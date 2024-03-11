@@ -8,7 +8,7 @@ services:
       - ./config/krakend:/etc/krakend
     ports:
       - "1234:1234"
-      - "8006:8080"
+      - "8001:8080"
       - "8090:8090"
     command: ["run", "-d", "-c", "/etc/krakend/krakend.json"]
     depends_on:
