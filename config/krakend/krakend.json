@@ -117,15 +117,15 @@
           "allow": [ "products" ],
           "extra_config": {
             "qos/ratelimit/proxy": {
-              "max_rate": 1,
-              "capacity": 1
+              "max_rate": 10,
+              "capacity": 5
             }
           }
         }
       ],
       "extra_config": {
         "qos/ratelimit/router": {
-          "max_rate": 2
+          "max_rate": 5
         }
       }
     },
