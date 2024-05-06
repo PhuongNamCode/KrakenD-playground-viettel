@@ -70,7 +70,7 @@ services:
     volumes:
       - ./data:/wwwroot
     ports:
-      - "8026:8080"
+      - "8026:8026"
   web:
     build:
       context: images/spa-auth-web
