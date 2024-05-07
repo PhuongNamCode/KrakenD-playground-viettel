@@ -8,7 +8,7 @@ services:
       - ./config/krakend:/etc/krakend
     ports:
       - "1234:1234"
-      - "8026:8026"
+      - "8080:8080"
       - "8090:8090"
     command: ["run", "-d", "-c", "/etc/krakend/krakend.json"]
     depends_on:
@@ -70,7 +70,7 @@ services:
     volumes:
       - ./data:/wwwroot
     ports:
-      - "8026:8026"
+      - "8080:8080"
   web:
     build:
       context: images/spa-auth-web
