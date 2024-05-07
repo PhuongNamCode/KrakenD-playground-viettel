@@ -8,7 +8,7 @@ services:
       - ./config/krakend:/etc/krakend
     ports:
       - "1234:1234"
-      - "8080:8091"
+      - "8091:8080"
       - "8090:8090"
     command: ["run", "-d", "-c", "/etc/krakend/krakend.json"]
     depends_on:
@@ -70,7 +70,7 @@ services:
     volumes:
       - ./data:/wwwroot
     ports:
-      - "8080:8091"
+      - "8091:8080"
   web:
     build:
       context: images/spa-auth-web
@@ -80,7 +80,7 @@ services:
     build:
       context: images/jwt-revoker
     ports:
-      - "9000:8092"
+      - "9000:8080"
     depends_on:
       - krakend_ce
     restart: always
