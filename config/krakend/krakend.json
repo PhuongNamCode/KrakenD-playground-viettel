@@ -2,8 +2,8 @@
   "$schema": "https://www.krakend.io/schema/v3.json",
   "version": 3,
   "name": "KrakenD Enterprise API Gateway",
-  "port": 8076,
-  "host": ["http://fake_api:8076"],
+  "port": 8080,
+  "host": ["http://fake_api:8080"],
   "timeout": "3000ms",
   "cache_ttl": "300s",
   "endpoints": [
@@ -272,7 +272,7 @@
           "roles_key": "roles",
           "issuer": "https://krakend.io",
           "roles": ["role_a", "role_c"],
-          "jwk_url": "http://fake_api:8076/jwk/symmetric.json",
+          "jwk_url": "http://fake_api:8080/jwk/symmetric.json",
           "disable_jwk_security": true
         }
       }
@@ -290,7 +290,7 @@
           "alg": "HS256",
           "kid": "sim2",
           "keys_to_sign": ["access_token", "refresh_token"],
-          "jwk_url": "http://fake_api:8076/jwk/symmetric.json",
+          "jwk_url": "http://fake_api:8080/jwk/symmetric.json",
           "disable_jwk_security": true
         }
       }
@@ -336,7 +336,7 @@
       "name": "async-agent-demo",
       "backend": [
         {
-          "host":[ "http://127.0.0.1:8076" ],
+          "host":[ "http://127.0.0.1:8080" ],
           "url_pattern": "/__debug/async-agent-demo",
           "method": "POST"
         }
