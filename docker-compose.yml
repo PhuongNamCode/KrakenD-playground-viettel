@@ -80,7 +80,7 @@ services:
     build:
       context: images/jwt-revoker
     ports:
-      - "9000:8080"
+      - "9000:8026"
     depends_on:
       - krakend_ce
     restart: always
