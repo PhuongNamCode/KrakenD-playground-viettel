@@ -70,7 +70,7 @@ services:
     volumes:
       - ./data:/wwwroot
     ports:
-      - "8080:8080"
+      - "8080:8091"
   web:
     build:
       context: images/spa-auth-web
@@ -80,7 +80,7 @@ services:
     build:
       context: images/jwt-revoker
     ports:
-      - "9000:8080"
+      - "9000:8092"
     depends_on:
       - krakend_ce
     restart: always
